@@ -37,7 +37,15 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
   - use the index from the handleGamePlay function to use bracket notation to declare the element as a tree emoji
   - use setBoard to update the board state
 
-- As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
+- ✅ As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
+
+  - checkout branch: **winner-loser**
+  - Use math.random to create a random number and store in state
+  - Use math.random to create a random number and store in state
+  - Modify handleGamePlay function to a conditional that checks if the index matches the winning, losing, or neutral position
+    - winning position changes to a treasure emoji
+    - losing position changes to a bomb emoji
+    - neutral position changes to a tree emoji
 
 - As a user, I can click on a “Play Again” button that will restart the game.
 

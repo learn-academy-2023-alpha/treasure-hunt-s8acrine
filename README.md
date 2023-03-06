@@ -21,6 +21,12 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
     - set font-size to 150 px and text-align to center
 
 - As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+
+  - checkout branch: **alert-index**
+  - Setup an onClick event in the Square component div
+  - Trigger a handleClick function that will create an alert of the index of the clicked square
+    - Will need to pass index as props to Square
+
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.

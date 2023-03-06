@@ -15,10 +15,28 @@ const App = () => {
     "?",
   ]);
 
+  const [treasureLocation, setTreasureLocation] = useState(
+    Math.floor(Math.random() * board.length)
+  );
+  const [bombLocation, setBombLocation] = useState(
+    Math.floor(Math.random() * board.length)
+  );
+
+  console.log("Treasure Location:", treasureLocation);
+  console.log("Bomb Location:", bombLocation);
+
   const handleGamePlay = (index) => {
     //alert(index);
     let updatedBoard = [...board];
-    updatedBoard[index] = "🏝️";
+    if (treasureLocation === bombLocation) {
+      setBombLocation(treasureLocation - 1);
+    } else if (index === treasureLocation) {
+      updatedBoard[index] = "💰";
+    } else if (index === bombLocation) {
+      updatedBoard[index] = "💣";
+    } else {
+      updatedBoard[index] = "🏝️";
+    }
     setBoard(updatedBoard);
   };
 

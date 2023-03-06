@@ -9,7 +9,7 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 ### 📚 User Stories
 
-- As a user, I can see a page with a three by three grid board game with a question mark in each square.
+- ✅ As a user, I can see a page with a three by three grid board game with a question mark in each square.
 
   - checkout branch: **grid**
   - Iterate on board state bariable to display square component for each element
@@ -20,7 +20,16 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
     - set div width to 3x box width + border width + ~20 pixels of 'wiggle room'
     - set font-size to 150 px and text-align to center
 
-- As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+- ✅ As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+
+  - checkout branch: **alert-index**
+  - Setup an onClick event in the Square component div
+  - Trigger a handleClick function that will create an alert of the index of the clicked square
+    - Will need to pass index as props to Square
+  - Create a handleGamePlay function in app.js to receive index information from handleClick in Square.js.
+  - Set handleClick to invoke the handleGamePlay function with the argument of index
+  - Set handleGameplay to alert user of the index of the item clicked
+
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.

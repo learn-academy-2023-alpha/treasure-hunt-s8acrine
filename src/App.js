@@ -40,6 +40,12 @@ const App = () => {
     setBoard(updatedBoard);
   };
 
+  const resetBoard = () => {
+    setBoard(["?", "?", "?", "?", "?", "?", "?", "?", "?"]);
+    setBombLocation(Math.floor(Math.random() * board.length));
+    setTreasureLocation(Math.floor(Math.random() * board.length));
+  };
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -55,6 +61,11 @@ const App = () => {
             />
           );
         })}
+      </div>
+      <div id="gameButtons">
+        <button id="resetButton" onClick={resetBoard}>
+          Reset Board
+        </button>
       </div>
     </>
   );

@@ -47,7 +47,11 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
     - losing position changes to a bomb emoji
     - neutral position changes to a tree emoji
 
-- As a user, I can click on a “Play Again” button that will restart the game.
+- ✅ As a user, I can click on a “Play Again” button that will restart the game.
+
+  - checkout branch **play-again**
+  - create a function resetBoard function that resets the board state to default, and resets the location of the bombs
+  - create a play again button that has an onclick to run the resetBoard function
 
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
 

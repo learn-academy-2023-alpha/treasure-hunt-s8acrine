@@ -16,3 +16,15 @@ h1 {
   width: 620px;
   margin: 0 auto;
 }
+
+#gameButtons {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+#resetButton {
+  size: 50px;
+  border: solid 2px red;
+}

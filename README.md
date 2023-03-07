@@ -60,6 +60,12 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
 
+  - create a state variable that tracks game state (playing, won, lost)
+  - Add a header section for in-game messages
+  - when treasure is revealed, set state to won
+  - when bomb is revealed, set state to lost
+  - default state is 'playing'
+
 - As a user, I can see a message informing me that I lost the game if I select the square that contains the bomb.
 
 - As a user, I cannot continue to play the game after I win or lose.

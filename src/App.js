@@ -24,6 +24,8 @@ const App = () => {
   );
   const [guessesLeft, setGuessesLeft] = useState(5);
 
+  const [gameState, setGameState] = useState("playing");
+
   console.log("Treasure Location:", treasureLocation);
   console.log("Bomb Location:", bombLocation);
 
@@ -34,8 +36,10 @@ const App = () => {
       setBombLocation(treasureLocation - 1);
     } else if (index === treasureLocation) {
       updatedBoard[index] = "💰";
+      setGameState("won");
     } else if (index === bombLocation) {
       updatedBoard[index] = "💣";
+      setGameState("lost");
     } else {
       updatedBoard[index] = "🏝️";
     }
@@ -66,7 +70,11 @@ const App = () => {
           );
         })}
       </div>
-      <GameStatus resetBoard={resetBoard} guessesLeft={guessesLeft} />
+      <GameStatus
+        resetBoard={resetBoard}
+        guessesLeft={guessesLeft}
+        gameState={gameState}
+      />
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import GameStatus from "./components/GameStatus";
 import Square from "./components/Square";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
   const [bombLocation, setBombLocation] = useState(
     Math.floor(Math.random() * board.length)
   );
+  const [guessesLeft, setGuessesLeft] = useState(5);
 
   console.log("Treasure Location:", treasureLocation);
   console.log("Bomb Location:", bombLocation);
@@ -38,12 +40,14 @@ const App = () => {
       updatedBoard[index] = "🏝️";
     }
     setBoard(updatedBoard);
+    setGuessesLeft(guessesLeft - 1);
   };
 
   const resetBoard = () => {
     setBoard(["?", "?", "?", "?", "?", "?", "?", "?", "?"]);
     setBombLocation(Math.floor(Math.random() * board.length));
     setTreasureLocation(Math.floor(Math.random() * board.length));
+    setGuessesLeft(5);
   };
 
   return (
@@ -62,11 +66,7 @@ const App = () => {
           );
         })}
       </div>
-      <div id="gameButtons">
-        <button id="resetButton" onClick={resetBoard}>
-          Reset Board
-        </button>
-      </div>
+      <GameStatus resetBoard={resetBoard} guessesLeft={guessesLeft} />
     </>
   );
 };
